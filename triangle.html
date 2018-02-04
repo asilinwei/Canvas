@@ -23,10 +23,16 @@
 		context.moveTo(150,150);
 		context.lineTo(250,150);
 		context.lineTo(200,150+50/Math.tan(30*Math.PI/180));
+
+		// Close the path.
 		context.closePath();
-		context.strokeStyle="red";
-		context.fillStyle="red";
+
+		// It is best to fill the color before stroking.
+		// If you stroke first , the color you fill later will overwrite some of the previous edges.
+		context.fillStyle="yellow";                          
 		context.fill();
+		context.lineWidth=20;
+		context.strokeStyle="black";
     };
     </script>
 </head>
