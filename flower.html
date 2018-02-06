@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		margin:0;
+	}
+	canvas{
+		border:1px solid red;
+	}
+    </style>
+</head>
+<body>
+	<canvas id="draw" width="400" height="300"></canvas>
+	<script type="text/javascript">
+	(function(){
+		var context=document.getElementById("draw").getContext("2d");
+		context.arc(150,100,40,0.5*Math.PI,2*Math.PI);
+		context.arc(230,100,40,Math.PI,2.5*Math.PI);
+		context.arc(230,180,40,1.5*Math.PI,3*Math.PI);
+		context.arc(150,180,40,2*Math.PI,3.5*Math.PI);
+		context.lineWidth=1;
+		context.strokeStyle="red";
+		context.stroke();
+	})();
+	</script>
+</body>
+</html>
