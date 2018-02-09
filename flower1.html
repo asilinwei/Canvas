@@ -25,6 +25,8 @@
         	for(var i=0;i<n;i+=1){
         		context.rotate((Math.PI/180)*(360/n));  // 以canvas原点为圆心旋转
         		context.rect(0,0,40,40);
+        		context.fillStyle="rgba(255,0,0,0.1)";
+        		context.fill();
         	}
         	context.strokeStyle="red";
         	context.stroke();
